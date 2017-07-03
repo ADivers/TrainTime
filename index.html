@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TrainTimer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <!-- bootstrap overrides -->
+  <link rel="stylesheet" type="text/css" href="assets/css/traintime.css">
+  <script src="assets/javascript/traintime.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+     
+
+<body>
+
+
+<div class="jumbotron"> 
+
+<h1>Anytime is Train Time</h1>
+<br>
+<h2>ku ku ka choo</h2>
+</div>
+
+<div class="container">
+<div class="panel panel-primary">
+<div class="panel-head"> <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Current Train Schedule</div>
+
+   <div id="currentemployees"></div>
+
+</div>
+
+<table class="table">
+  <thead class="thead-default">
+    <tr>
+      <th>Train Name</th>
+      <th>Destination</th>
+      <th>Frequency</th>
+      <th>Next Arrival</th>
+      <th>Minutes Away</th>
+    </tr>
+  </thead>
+  <tbody id="table-display">
+<!--     <tr>
+      <td>Trenton Express</td>
+      <td>Trenton</td>
+      <td>25</td>
+      <td>5:36 PM</td>
+      <td>10</td>
+    </tr> -->
+  </tbody>
+</table>
+
+</div>
+
+<div class="container">
+<!--   <h2>Search Parameters</h2>
+ -->
+ <div class="panel panel-primary">
+<div class="panel-head"> <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Add Train </div>
+
+  <form id="form">
+    <div class="form-group">
+      <label for="trainName">Train Name</label>
+      <input type="search" class="form-control" id="trainName" name="trainName">
+    </div>
+    <div class="form-group">
+      <label for="destination">Destination</label>
+      <input type="search" class="form-control" id="destination" name="destination">
+    </div>
+    <div class="form-group">
+      <label for="firstTrain">First Train Time (HH:MM - military time)</label>
+      <input class="form-control" type="search" id="firstTrain"  name="firstTrain">
+    </div>
+    <div class="form-group">
+      <label for="frequency">Frequency (min)</label>
+      <input type="number" class="form-control" id="frequency"  name="frequency">
+    </div>
+    
+    <button type="submit" class="btn btn-default" id="btnSubmit">
+     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>submit</button>
+
+  </form>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+</body>
+</html>
